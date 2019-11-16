@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/global.css">
+    <title>File36 - Upload and Share</title>
+</head>
+
+<body>
+    <div class="wrapper">
+       <div class="upload-console">
+           <div class="upload-console-header">Upload</div>
+           <div class="upload-console-body">
+               <h3>Select files from your computer</h3>
+               <form action="uploads/upload.php" method="post" enctype="multipart/form-data">
+                    <input type="file" name="files[]" multiple id="standard-upload-files">
+                    <input type="submit" value="Upload files" id="standard-upload">
+                </form>
+
+                <h3>Or drag and drop files below</h3>
+                <div class="upload-console-drop" id="drop-zone">
+                    Just drag and drop files here
+                </div>
+                <div class="bar">
+                   <div class="bar-fill" id="bar-fill">
+                    <div class="v bar-fill-text" id="bar-fill-text">
+                        20%
+                    </div>
+                   </div> 
+                </div>
+                <div id="uploads-finished" class="hidden">
+                    <h3>Processed files</h3>
+                    <!-- <div class="upload-console-upload">
+                        <a href="#">filename.jpg</a>
+                        <span>Success</span>
+                    </div> -->
+                </div>
+           </div>
+       </div>
+    </div>
+    <script src="/js/global.js"></script>
+</body>
+
+</html>
