@@ -2,8 +2,25 @@
     "use strict";
 
     var dropzone = document.getElementById("drop-zone");
+    var barFill = document.getElementById("bar-fill");
+    var barFillText = document.getElementById("bar-fill-text");
+
     var startUpload = function(files){
-        console.log(files);
+       
+        app.uploader({
+            files:files,
+            progressBar:barFill,
+            progressText:barFillText,
+            processor: 'uploads/upload.php',
+
+            finished: function(data){
+                //console.log(data);
+            },
+
+            error: function(){
+                console.log("There was an error");
+            }
+        })
     }
 
     //darg and drop
